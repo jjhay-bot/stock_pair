@@ -19,7 +19,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     if @user.save
       sign_out resource
-
       redirect_to users_path
     else 
       render :new
